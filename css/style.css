@@ -1,0 +1,258 @@
+
+
+* {
+    font-family: Times, serif;
+}
+
+/* --------------------------- */
+/* --------------------------- */ /* NAV BAR */
+
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 0px solid transparent;
+}
+
+
+.navbar {
+    border-radius: 0px;
+}
+
+
+/* --------------------------- */
+/* --------------------------- */ /* MAIN CONTENT */
+
+#title {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+#title h1{
+    /* color: white; */
+    font-size: 6vh;
+}
+
+#title h3{
+    /* color: rgba(255, 255, 255, 0.4) */
+    font-size: 3vh;
+}
+
+.design1{
+    /* background: linear-gradient(to right, #c2e59c, #64b3f4); */
+    /* background: linear-gradient(to right, #22c1c3, #fdbb2d); */
+    background: linear-gradient(to right, #005aa7, #fffde4);
+}
+
+
+
+#big-box .game{
+    padding-bottom: 4.8vh;
+    margin-bottom: 10vh;
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10vh;
+
+}
+
+#message p{
+    text-align: center;
+    color: white;
+}
+
+.table {
+    width: 50%;
+    max-width: 100%;
+}
+
+#left h3{
+ color: white;
+ text-align: center;
+ margin-top: 5vh;
+}
+
+#left p{
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+
+}
+
+#left .glyphicon-time{
+    padding-right: 0.4vw;
+}
+
+
+#right .btn-primary{
+    margin-top: 14vh;
+    font-size: 2.5vh;
+}
+
+#right h3{
+    color: white;
+    margin-left: 2vw;
+    margin-top: 6vh;
+    /* text-align: center; */
+}
+
+
+
+
+/* --------------------------- */
+/* --------------------------- */ /* Grille de jeu */
+
+
+/* --------------------------- */ /* Timer */
+
+#timer{
+    margin: auto ;
+    margin-bottom: 10vh;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tim{
+      width: 100%;
+      text-align: center;
+      font-size: 2.5vh;
+      color: white;
+  }
+ 
+  #left button{
+    background: #3498db;
+    color: #fff;
+    width: 70px;
+    border-radius: 5px;
+    line-height: 1.5em;
+    border: none
+  }
+
+
+
+/* --------------------------- */ 
+
+.line{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* .line li{
+    width:2vh;
+    height: 2.6vh;
+    text-align: center;
+    font-size: 2.4vh;
+    list-style-type: none;
+    padding: 0.8vh 1.3vh;
+    /* border: 0.4px solid black; */
+    /* ///////////////////border: 0.4px solid white; */
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    
+/* }  */
+
+#myModal{
+    background-image: url(../Images/bomb.png);
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+#middle button{
+    width:90%;
+    height: 95%;
+    text-align: center;
+    font-size: 2.4vh;
+    list-style-type: none;
+    /* padding-top: 0.6vh; */
+    /* padding-left: 1vw; */
+    border: 0px solid white;
+}
+
+.line li{
+    width:4.6vh;
+    height: 4.8vh;
+    text-align: center;
+    font-size: 2.4vh;
+    list-style-type: none;
+    padding-top: 0.7vh;
+    /* padding: 0.8vh 1.3vh; */
+    border: 0.4px solid white;
+    
+}
+
+.line li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.line button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.discovered{
+    color: white;
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.wrong{
+    color: white;
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+.hiden{
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.bomb img{
+    padding-left: 0.35vw;
+    width: 2.0vw;
+}
+
+
+
+
+/* --------------------------- */
+/* --------------------------- */ /* RULES */
+
+#rules {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#rules .container{
+    padding: 5vh 0;
+}
+
+#rules h2 {
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+#rules li{
+    line-height: 2.5;
+    font-size: 2vh;
+}
+
+
+
+/* --------------------------- */
+/* --------------------------- */ /* USER COMMENTS */
+
+
+
+/* --------------------------- */
+/* --------------------------- */ /* FOOTER */
+
+.foot{
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 3vh 0;
+    font-size: 1.5vh;
+    line-height: 0.8;
+}
+
+
+
+rgb(46, 58, 80) /* back */
+rgb(243, 229, 220) /* beige */
+rgb(224, 204, 187) /* beige foncé */

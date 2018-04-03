@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demineur</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <!-- NAV -->
+
+    <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.ironhack.com/en" target="_blank">Ironhack Project</a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#big-box">Game<span class="sr-only">(current)</span></a></li>
+                <li><a href="#rules">Rules</a></li>
+            </ul>
+            
+            <p class="navbar-text navbar-right">Signed by <a href="#" class="navbar-link">Pierre Jablonski</a></p>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+    <!-- NAV ENDS -->
+
+    <!-- MAIN -->
+
+
+
+    <div id="big-box" class="container-fluid design1">
+        <div id="title">
+            <h1>Minesweeper</h1>
+            <h3>Get prepared, time is running out !</h3>    
+        </div>
+        
+        <div class="container game ">
+            <div class="game-header">
+                <div id="message">
+                    <p>Click on any cell to start</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div id="left" class="col-md-3">
+                    <div id="timer">
+                        <div class="tim">
+                            <h3><span style="color: white" class="glyphicon glyphicon-time"></span> Timer</h3>
+                            <span id="minutes" >0</span> :
+                            <span id="seconds" >0</span> :
+                            <span id="millisec" >0 ms</span>
+                        
+                        </div>
+                        <button id="start" onclick="start()">Start</button>
+                        <button id="stop" onclick="stop()">Stop</button>
+                        <button id="reset" onclick="reset()">Reset</button>
+                    </div>
+
+                    <div>
+                        <h3>Guiness Record 15.4 s</h3>
+                    </div>
+                </div>
+
+                <div id="middle" class="table col-md-6">
+                    
+
+                </div>
+
+                <div id="right" class="col-md-3">
+                        <h3 id="Nflag" ><span style="color: white" class="glyphicon glyphicon-flag"></span></h3>
+                        <button id="start-again" type="button" class="btn btn-primary">Start Again</button>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">GAME OVER</h4>
+        </div>
+        <div class="modal-body">
+          BOOOOOOOOOM You triggered a bomb ! Try one more time
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="lost" type="button" class="btn btn-primary" data-dismiss="modal">Start again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- MAIN ENDS -->
+
+    <!-- RULES -->
+
+    <div id="rules">
+        <div class="container">
+            <h2>Minesweeper Rules</h2>
+            <ul>
+                <li>The goal of Minesweeper is to discover all free boxes without triggering the explosion of a bomb</li>
+                <li>Click to discover a box</li>
+                <li>Right Click to place a flag</li> 
+                <li>The numbers displayed on discovered boxes indicate how many mines are around : left, right, above, under, or even in diagonal. Then maximum is 8 bombs around </li>
+                <li>Thanks to those indications, you can deduce where are the bombs so you avoid them. If a box has number 1, and there is only one box that has not been discovered yet around, this box is hiding a bomb</li>
+                <li>The counter at the top right of the grid indicates how many bombs you still have to avoid</li>
+                <li>On the left of the grid is the timer, finish as soon as possible !</li>
+            </ul>     
+        </div>   
+    </div>
+
+
+    <!-- RULE ENDS -->
+
+
+    <!-- COMMENTS -->
+
+    <div></div>
+
+    <!-- COMMENTS ENDS -->
+
+    <!-- FOOTER -->
+    
+    <div class="container-fluid foot">
+        <div class="container">
+            <p>Copyright © 2018 Ironhack Project - Minesweeper</p>
+        </div>
+    </div>
+    <!-- <img src="./Images/bomb.png" alt=""> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="./js/timer.js"></script> -->
+    <script src="./js/timer.js"></script>
+    <script src="./js/math.js"></script>
+    <script src="./js/matrix.js"></script>
+</body>
+</html>
+
+
+    <!-- FOOTER ENDS -->
+
+
+
+
+
+<!-- Idea : dans la description du jeu, sur click on any cell, animer cette partie en mettant en message qui s'écrit tout seul au fur et à mesure, et qui explique : -->
+<!-- Votre mission est de désactiver la bombe, sinon elle explosera. Mais votre temps est compté. D'autres mines sont dissimulées... -->
+<!-- Vous avez X secondes. May the force be with you -->
+<!-- Click on any cell to start -->
